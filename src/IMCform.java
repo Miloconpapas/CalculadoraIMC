@@ -3,6 +3,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.text.DecimalFormat;
+
 
 public class IMCform {
     private JPanel imcPanel;
@@ -30,8 +32,12 @@ public class IMCform {
                 double f;
                 f=(d/(c*c));
 
-                 String g;
-                g=String.valueOf(f);
+                //String g;
+                //g=String.valueOf(f);
+                //textFieldResultado.setText(g);
+
+                DecimalFormat df = new DecimalFormat("#.##"); // muestra solo dos decimales
+                String g = df.format(f);
                 textFieldResultado.setText(g);
 
                 if (f < 18.5) {
